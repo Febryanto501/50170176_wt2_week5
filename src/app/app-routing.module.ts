@@ -18,11 +18,12 @@ const routes: Routes = [
         path: "",
         redirectTo: "/login",
         pathMatch: "full"
-
+        
       },
       {
         path: "dashboard",
-        component: DashboardComponent
+        component: DashboardComponent,
+        canActivateChild: [LoginGuard]
       },
       {
         path: "pokemon/:id",
@@ -39,7 +40,7 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: "dashboard",
+    path: "**",
     component: Page404Component
   }
 ];
