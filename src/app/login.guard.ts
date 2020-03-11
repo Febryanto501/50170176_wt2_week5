@@ -20,7 +20,7 @@ export class LoginGuard implements CanActivate {
   }
 
   canActivateChild(state: RouterStateSnapshot) {
-    return true;
+    //return true;
 
     if (this.userService.isLoggedIn) {
       return true;

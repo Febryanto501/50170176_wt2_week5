@@ -17,13 +17,13 @@ const routes: Routes = [
       {
         path: "",
         redirectTo: "/login",
-        pathMatch: "full"
-        
+        pathMatch: "full",
+        canActivateChild: [LoginGuard]
       },
       {
         path: "dashboard",
         component: DashboardComponent,
-        canActivateChild: [LoginGuard]
+        
       },
       {
         path: "pokemon/:id",

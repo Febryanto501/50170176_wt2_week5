@@ -17,6 +17,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { LoginGuard } from "./login.guard";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     
   ],
   imports: [BrowserModule,MatToolbarModule, AppRoutingModule, BrowserAnimationsModule,MatCardModule,MatButtonModule,MatExpansionModule],
-  providers: [],
+  providers: [LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
